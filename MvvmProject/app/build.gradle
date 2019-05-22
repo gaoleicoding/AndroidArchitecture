@@ -48,6 +48,8 @@ dependencies {
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.0.0"
     implementation "androidx.lifecycle:lifecycle-runtime:2.0.0"
     implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
     // Dagger
 //    annotationProcessor "com.google.dagger:dagger-android-processor:2.15"
 //    annotationProcessor "com.google.dagger:dagger-compiler:2.15"

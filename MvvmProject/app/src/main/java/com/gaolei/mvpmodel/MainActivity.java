@@ -21,12 +21,12 @@ import android.widget.Toast;
 import com.gaolei.mvpmodel.activity.BaseActivity;
 import com.gaolei.mvpmodel.databinding.ActivityMainBinding;
 import com.gaolei.mvpmodel.fragment.BaseFragment;
-import com.gaolei.mvpmodel.fragment.BaseMvpFragment;
 import com.gaolei.mvpmodel.fragment.HomeFragment;
 import com.gaolei.mvpmodel.fragment.KnowledgeFragment;
 import com.gaolei.mvpmodel.fragment.NavigationFragment;
 import com.gaolei.mvpmodel.fragment.ProjectFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 
 import java.util.ArrayList;
 
@@ -45,8 +45,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initData(Bundle bundle) {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        // 取消BottomNavigation大于3个时，动画
-//        BottomNavigationViewHelper.disableShiftMode(binding.bottomNavigationView);
         mFragments = new ArrayList<BaseFragment>();
         mFragments.add(new HomeFragment());
         mFragments.add(new KnowledgeFragment());
@@ -58,6 +56,8 @@ public class MainActivity extends BaseActivity {
         } else {
             switchFragment(0);
         }
+        binding.bottomNavigationView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
+
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
