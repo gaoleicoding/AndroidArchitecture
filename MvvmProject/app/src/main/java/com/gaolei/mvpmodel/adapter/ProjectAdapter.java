@@ -29,11 +29,10 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyViewHo
     }
 
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_project_list, null);
         ItemProjectListBinding bindView = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.item_project_list, parent, false);
 
         MyViewHolder holder = new MyViewHolder(bindView);
-        view.setOnClickListener(new View.OnClickListener() {
+        bindView.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

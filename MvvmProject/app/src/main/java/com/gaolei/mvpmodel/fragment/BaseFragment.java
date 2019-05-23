@@ -1,9 +1,5 @@
 package com.gaolei.mvpmodel.fragment;
 
-import androidx.annotation.NonNull;
-import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +8,10 @@ import android.view.ViewGroup;
 import com.gaolei.mvpmodel.R;
 import com.gaolei.mvpmodel.databinding.FragmentBaseBinding;
 import com.gaolei.mvpmodel.utils.NetworkUtil;
+
+import androidx.annotation.NonNull;
+import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
 
 
 public abstract class BaseFragment extends Fragment implements View.OnClickListener {
@@ -26,16 +26,16 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
         if (bundle == null) {
             bundle = savedInstanceState;
         }
+        initView();
         initData(bundle);
         return binding.getRoot();
     }
 
-    /**
-     * 用于布局加载完毕，子Fragment可以开始初始化数据
-     *
-     * @param bundle
-     */
+    public abstract void initView();
+
     public abstract void initData(Bundle bundle);
+
+
 
     private void initBaseView(FragmentBaseBinding binding) {
         if (!NetworkUtil.isNetworkAvailable(getActivity()))

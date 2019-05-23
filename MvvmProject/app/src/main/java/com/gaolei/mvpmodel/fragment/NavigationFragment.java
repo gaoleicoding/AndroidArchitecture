@@ -1,6 +1,5 @@
 package com.gaolei.mvpmodel.fragment;
 
-import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,12 +7,18 @@ import android.view.ViewGroup;
 
 import com.gaolei.mvpmodel.R;
 import com.gaolei.mvpmodel.databinding.FragmentNavigationBinding;
-import com.gaolei.mvpmodel.mpresenter.BasePresenter;
+
+import androidx.databinding.DataBindingUtil;
 
 
-public class NavigationFragment extends BaseMvpFragment {
+public class NavigationFragment extends BaseFragment {
 
     FragmentNavigationBinding binding;
+
+    @Override
+    public void initView() {
+
+    }
 
     @Override
     public void initData(Bundle bundle) {
@@ -31,8 +36,4 @@ public class NavigationFragment extends BaseMvpFragment {
     public void reload() {
     }
 
-    @Override
-    public BasePresenter initPresenter() {
-        return null;
-    }
 }

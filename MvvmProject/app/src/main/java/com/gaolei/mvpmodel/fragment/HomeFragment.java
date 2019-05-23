@@ -2,15 +2,7 @@ package com.gaolei.mvpmodel.fragment;
 
 import android.content.Context;
 import android.content.Intent;
-
-import androidx.annotation.Nullable;
-import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,10 +16,10 @@ import com.gaolei.mvpmodel.adapter.ProjectAdapter;
 import com.gaolei.mvpmodel.databinding.FragmentHomeBinding;
 import com.gaolei.mvpmodel.mmodel.BannerListData;
 import com.gaolei.mvpmodel.mmodel.ProjectListData;
-import com.gaolei.mvpmodel.mpresenter.HomePresenter;
-import com.gaolei.mvpmodel.mview.ProjectListView;
 import com.gaolei.mvpmodel.viewmodel.BannerViewModel;
 import com.gaolei.mvpmodel.viewmodel.ProjectViewModel;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
 import com.youth.banner.listener.OnBannerListener;
@@ -35,13 +27,20 @@ import com.youth.banner.listener.OnBannerListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 
 public class HomeFragment extends BaseFragment {
 
-    private static final String KEY_PROJECT_ID = "project_id";
     ProjectAdapter projectAdapter;
     FragmentHomeBinding binding;
-
+    ProjectViewModel viewModel;
+    public int mCurrentPage = 1;
+    List<ProjectListData.FeedArticleData> articleDataList=new ArrayList<>();
     @Override
     public View getContentLayout(LayoutInflater inflater, ViewGroup container) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false);
@@ -50,21 +49,61 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public void reload() {
-
+        articleDataList.clear();
+        mCurrentPage = 1;
+        initData(null);
     }
+    @Override
+    public void initView() {
+        initSmartRefreshLayout();
+        projectAdapter = new ProjectAdapter(getActivity(), articleDataList);
 
+        binding.projectRecyclerview.addItemDecoration(new DividerItemDecoration(getActivity(),
+                DividerItemDecoration.VERTICAL_LIST));
+        binding.projectRecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
+        binding.projectRecyclerview.setAdapter(projectAdapter);
+        projectAdapter.setOnItemClickListener(new ProjectAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                Intent intent = new Intent(getActivity(), ArticleDetailActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("url", articleDataList.get(position).getLink());
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+    }
     @Override
     public void initData(Bundle bundle) {
-        final ProjectViewModel viewModel = ViewModelProviders.of(this)
+        viewModel = ViewModelProviders.of(this)
                 .get(ProjectViewModel.class);
-
         observeViewModel(viewModel);
-        viewModel.setProjectParams(new ProjectViewModel.ProjectParams(1, 294));
-
+        viewModel.setProjectParams(new ProjectViewModel.ProjectParams(mCurrentPage, 294));
 
         final BannerViewModel bannerViewModel = ViewModelProviders.of(this)
                 .get(BannerViewModel.class);
         observeBannerViewModel(bannerViewModel);
+    }
+
+
+    //初始化下拉刷新控件
+    private void initSmartRefreshLayout() {
+        binding.smartRefreshLayout.setEnableLoadMore(true);
+        binding.smartRefreshLayout.setEnableRefresh(false);
+        binding.smartRefreshLayout.setEnableScrollContentWhenLoaded(true);//是否在加载完成时滚动列表显示新的内容
+        binding.smartRefreshLayout.setEnableFooterFollowWhenLoadFinished(true);
+        binding.smartRefreshLayout.setOnRefreshLoadMoreListener(new OnRefreshLoadMoreListener() {
+            @Override
+            public void onLoadMore(RefreshLayout refreshLayout) {
+                ++mCurrentPage;
+                viewModel.setProjectParams(new ProjectViewModel.ProjectParams(mCurrentPage, 294));
+            }
+
+            @Override
+            public void onRefresh(RefreshLayout refreshLayout) {
+                binding.smartRefreshLayout.finishRefresh(1000);
+            }
+        });
     }
 
     private void observeViewModel(final ProjectViewModel viewModel) {
@@ -73,24 +112,9 @@ public class HomeFragment extends BaseFragment {
             @Override
             public void onChanged(@Nullable ProjectListData listData) {
                 if (listData != null) {
-                    final List<ProjectListData.FeedArticleData> articleDataList = listData.data.getDatas();
-                    Log.d("gaolei", "articleDataList.size():" + articleDataList.size());
-                    projectAdapter = new ProjectAdapter(getActivity(), articleDataList);
-
-                    binding.projectRecyclerview.addItemDecoration(new DividerItemDecoration(getActivity(),
-                            DividerItemDecoration.VERTICAL_LIST));
-                    binding.projectRecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
-                    binding.projectRecyclerview.setAdapter(projectAdapter);
-                    projectAdapter.setOnItemClickListener(new ProjectAdapter.OnItemClickListener() {
-                        @Override
-                        public void onItemClick(View v, int position) {
-                            Intent intent = new Intent(getActivity(), ArticleDetailActivity.class);
-                            Bundle bundle = new Bundle();
-                            bundle.putString("url", articleDataList.get(position).getLink());
-                            intent.putExtras(bundle);
-                            startActivity(intent);
-                        }
-                    });
+                    articleDataList.addAll(listData.data.getDatas());
+                    projectAdapter.notifyDataSetChanged();
+                    binding.smartRefreshLayout.finishLoadMore();
                 }
             }
         });
@@ -114,8 +138,6 @@ public class HomeFragment extends BaseFragment {
         List imageList = new ArrayList();
         List titleList = new ArrayList();
         int size = itemBeans.data.size();
-        Log.d("gaolei", "url--------------" + itemBeans.data.get(0).getUrl());
-        Log.d("gaolei", "title--------------" + itemBeans.data.get(0).getTitle());
         for (int i = 0; i < size; i++) {
             imageList.add(itemBeans.data.get(i).getImagePath());
             titleList.add(itemBeans.data.get(i).getTitle());
@@ -128,28 +150,14 @@ public class HomeFragment extends BaseFragment {
             }
         });
 
-        //设置样式,默认为:Banner.NOT_INDICATOR(不显示指示器和标题)
-        //可选样式如下:
-        //1. Banner.CIRCLE_INDICATOR    显示圆形指示器
-        //2. Banner.NUM_INDICATOR   显示数字指示器
-        //3. Banner.NUM_INDICATOR_TITLE 显示数字指示器和标题
-        //4. Banner.CIRCLE_INDICATOR_TITLE  显示圆形指示器和标题
         binding.banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);//设置圆形指示器与标题
-        //设置banner动画效果
-//        Tansformer.CubeIn
-//        Transformer.CubeOut
-//        Transformer.DepthPage
-//        Transformer.FlipHorizontal
-//        Transformer.FlipVertical
+
         binding.banner.setBannerAnimation(Transformer.FlipHorizontal);
         binding.banner.setIndicatorGravity(BannerConfig.CENTER);//设置指示器位置
         binding.banner.setDelayTime(3000);//设置轮播时间
         binding.banner.setImages(imageList);//设置图片源
         binding.banner.setBannerTitles(titleList);//设置标题源
-
         binding.banner.start();
-
-
         binding.banner.setOnBannerListener(new OnBannerListener() {
             @Override
             public void OnBannerClick(int position) {
@@ -161,23 +169,6 @@ public class HomeFragment extends BaseFragment {
             }
         });
     }
-    //初始化下拉刷新控件
-    private void initSmartRefreshLayout() {
-        smartRefreshLayout.setEnableLoadMore(true);
-        smartRefreshLayout.setEnableRefresh(false);
-        smartRefreshLayout.setEnableScrollContentWhenLoaded(true);//是否在加载完成时滚动列表显示新的内容
-        smartRefreshLayout.setEnableFooterFollowWhenLoadFinished(true);
-        smartRefreshLayout.setOnRefreshLoadMoreListener(new OnRefreshLoadMoreListener() {
-            @Override
-            public void onLoadMore(RefreshLayout refreshLayout) {
-                mPresenter.onLoadMore();
-            }
 
-            @Override
-            public void onRefresh(RefreshLayout refreshLayout) {
-                mPresenter.onRefreshMore();
-            }
-        });
-    }
 
 }

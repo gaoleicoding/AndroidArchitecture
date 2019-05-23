@@ -8,30 +8,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:id="@+id/rl_title"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:background="@color/yellow">
-
-            <ImageView
-                android:id="@+id/iv_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="15dp"
-                android:src="@mipmap/icon_comn_back"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="首页"
-                android:textColor="#ffffff"
-                android:textSize="18sp" />
-        </RelativeLayout>
+        <include
+            android:id="@+id/layout_header"
+            layout="@layout/layout_header" />
 
         <FrameLayout
             android:id="@+id/fragment_group"

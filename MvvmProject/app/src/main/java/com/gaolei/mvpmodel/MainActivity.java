@@ -7,9 +7,11 @@ import android.content.pm.PackageManager;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
+
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -37,14 +39,19 @@ public class MainActivity extends BaseActivity {
     private static final int MY_PERMISSION_REQUEST_CODE = 10000;
 
     String[] permissionArray = new String[]{
-            Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
     };
     ActivityMainBinding binding;
 
     @Override
-    protected void initData(Bundle bundle) {
+    protected void initView() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding.layoutHeader.title.setText(getString(R.string.home_pager));
+    }
+
+    @Override
+    protected void initData(Bundle bundle) {
+
         mFragments = new ArrayList<BaseFragment>();
         mFragments.add(new HomeFragment());
         mFragments.add(new KnowledgeFragment());
@@ -58,28 +65,27 @@ public class MainActivity extends BaseActivity {
         }
         binding.bottomNavigationView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
 
-
         binding.bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.tab_main_pager:
-                        binding.title.setText(R.string.home_pager);
+                        binding.layoutHeader.title.setText(R.string.home_pager);
                         switchFragment(0);
 
                         break;
                     case R.id.tab_knowledge_hierarchy:
-                        binding.title.setText(R.string.knowledge_hierarchy);
+                        binding.layoutHeader.title.setText(R.string.knowledge_hierarchy);
                         switchFragment(1);
 
                         break;
                     case R.id.tab_navigation:
-                        binding.title.setText(R.string.navigation);
+                        binding.layoutHeader.title.setText(R.string.navigation);
                         switchFragment(2);
 
                         break;
                     case R.id.tab_project:
-                        binding.title.setText(R.string.project);
+                        binding.layoutHeader.title.setText(R.string.project);
                         switchFragment(3);
                         break;
                 }

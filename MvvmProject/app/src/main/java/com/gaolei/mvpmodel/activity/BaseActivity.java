@@ -34,7 +34,7 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
         ivBack = findViewById(R.id.iv_back);
         ivBack.setOnClickListener(this);
     }
-
+    protected abstract void initView();
     protected abstract void initData(Bundle bundle);
 
 
