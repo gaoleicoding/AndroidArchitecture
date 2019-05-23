@@ -3,30 +3,46 @@ package com.gaolei.mvpmodel.viewmodel;
 import android.app.Application;
 
 import com.gaolei.mvpmodel.mmodel.BannerListData;
-import com.gaolei.mvpmodel.repository.BannerRepository;
 
-import androidx.databinding.ObservableField;
-import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
-public class BannerViewModel extends AndroidViewModel {
+public class BannerViewModel extends BaseViewModel {
     private static final String TAG = BannerViewModel.class.getName();
-    private static final MutableLiveData ABSENT = new MutableLiveData();
 
 
-    private LiveData<BannerListData> projectObservable = null;
+    private MutableLiveData<BannerListData> bannerLiveData;
 
-    public ObservableField<BannerListData> project = new ObservableField<>();
 
     public BannerViewModel(Application application) {
         super(application);
-
-        projectObservable = new BannerRepository().getBanner();
+        bannerLiveData = new MutableLiveData<>();
     }
 
-    public LiveData<BannerListData> getObservableProject() {
-        return projectObservable;
+    public LiveData<BannerListData> getObservableBanner() {
+        return bannerLiveData;
+    }
+
+    public LiveData<BannerListData> getBanner() {
+
+        gitHubService.getBannerListData().enqueue(new Callback<BannerListData>() {
+            @Override
+            public void onResponse(Call<BannerListData> call, Response<BannerListData> response) {
+                bannerLiveData.setValue(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<BannerListData> call, Throwable t) {
+                bannerLiveData.setValue(null);
+            }
+
+
+        });
+
+        return bannerLiveData;
     }
 
 }

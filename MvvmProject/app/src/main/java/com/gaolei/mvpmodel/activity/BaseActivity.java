@@ -30,6 +30,7 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
         if (bundle == null) {
             bundle = savedInstanceState;
         }
+        initView();
         initData(bundle);
         ivBack = findViewById(R.id.iv_back);
         ivBack.setOnClickListener(this);

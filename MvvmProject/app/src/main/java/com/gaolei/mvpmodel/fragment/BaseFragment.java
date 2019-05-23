@@ -41,6 +41,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
         if (!NetworkUtil.isNetworkAvailable(getActivity()))
             binding.baseErrorLayout.llBaseErrorContent.setVisibility(View.VISIBLE);
         binding.baseErrorLayout.btErrorRefresh.setOnClickListener(this);
+        return;
     }
 
     /**

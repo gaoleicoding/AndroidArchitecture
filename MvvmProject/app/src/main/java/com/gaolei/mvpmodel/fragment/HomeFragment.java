@@ -36,11 +36,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 public class HomeFragment extends BaseFragment {
 
-    ProjectAdapter projectAdapter;
-    FragmentHomeBinding binding;
-    ProjectViewModel viewModel;
-    public int mCurrentPage = 1;
-    List<ProjectListData.FeedArticleData> articleDataList=new ArrayList<>();
+    private ProjectAdapter projectAdapter;
+    private FragmentHomeBinding binding;
+    private ProjectViewModel viewModel;
+    private int mCurrentPage = 1;
+    private List<ProjectListData.FeedArticleData> articleDataList = new ArrayList<>();
+
     @Override
     public View getContentLayout(LayoutInflater inflater, ViewGroup container) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false);
@@ -53,6 +54,7 @@ public class HomeFragment extends BaseFragment {
         mCurrentPage = 1;
         initData(null);
     }
+
     @Override
     public void initView() {
         initSmartRefreshLayout();
@@ -73,6 +75,7 @@ public class HomeFragment extends BaseFragment {
             }
         });
     }
+
     @Override
     public void initData(Bundle bundle) {
         viewModel = ViewModelProviders.of(this)
@@ -83,6 +86,7 @@ public class HomeFragment extends BaseFragment {
         final BannerViewModel bannerViewModel = ViewModelProviders.of(this)
                 .get(BannerViewModel.class);
         observeBannerViewModel(bannerViewModel);
+        bannerViewModel.getBanner();
     }
 
 
@@ -120,9 +124,9 @@ public class HomeFragment extends BaseFragment {
         });
     }
 
-    private void observeBannerViewModel(final BannerViewModel viewModel) {
+    private void observeBannerViewModel(final BannerViewModel bannerViewModel) {
         // Observe banner data
-        viewModel.getObservableProject().observe(this, new Observer<BannerListData>() {
+        bannerViewModel.getObservableBanner().observe(this, new Observer<BannerListData>() {
             @Override
             public void onChanged(@Nullable BannerListData listData) {
                 if (listData != null) {

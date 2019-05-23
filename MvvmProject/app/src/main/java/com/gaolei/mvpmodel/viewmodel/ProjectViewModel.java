@@ -5,16 +5,16 @@ import android.app.Application;
 import com.gaolei.mvpmodel.mmodel.ProjectListData;
 import com.gaolei.mvpmodel.net.RestApiProvider;
 import com.gaolei.mvpmodel.net.RestService;
-import androidx.lifecycle.AndroidViewModel;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ProjectViewModel extends AndroidViewModel {
+public class ProjectViewModel extends BaseViewModel {
 
-    private MutableLiveData<ProjectListData> projectObservable;
+    private MutableLiveData<ProjectListData> projectLiveData;
     private MutableLiveData<ProjectParams> paramsLiveData;
 
 
@@ -24,8 +24,8 @@ public class ProjectViewModel extends AndroidViewModel {
     public ProjectViewModel(Application application) {
         super(application);
 
-        this.paramsLiveData = new MutableLiveData<>();
-        this.projectObservable = new MutableLiveData<>();
+        paramsLiveData = new MutableLiveData<>();
+        projectLiveData = new MutableLiveData<>();
 
 //        projectObservable = Transformations.switchMap(paramsLiveData, input -> {
 //            ProjectParams params=paramsLiveData.getValue();
@@ -33,23 +33,26 @@ public class ProjectViewModel extends AndroidViewModel {
 //        });
 
     }
+
     public void setProjectParams(ProjectParams params) {
 
         gitHubService.getProjectListData(params.page, params.cid).enqueue(new Callback<ProjectListData>() {
             @Override
             public void onResponse(Call<ProjectListData> call, Response<ProjectListData> response) {
-                projectObservable.setValue(response.body());
+                projectLiveData.setValue(response.body());
             }
+
             @Override
             public void onFailure(Call<ProjectListData> call, Throwable t) {
-                projectObservable.setValue(null);
+                projectLiveData.setValue(null);
             }
 
 
         });
     }
+
     public LiveData<ProjectListData> getObservableProject() {
-        return projectObservable;
+        return projectLiveData;
     }
 
     public static class ProjectParams {
