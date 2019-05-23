@@ -11,7 +11,7 @@
             android:id="@+id/layout_header"
             layout="@layout/layout_header" />
 
-        <com.gaolei.mvpmodel.view.Html5Webview
+        <com.gaolei.mvvm.view.Html5Webview
             android:id="@+id/webview_article"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
