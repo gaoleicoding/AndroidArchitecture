@@ -12,6 +12,7 @@ import com.gaolei.mvvm.mmodel.ProjectListData.FeedArticleData;
 
 import java.util.List;
 
+import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,26 +21,24 @@ import static com.gaolei.mvvm.application.CustomApplication.options;
 public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyViewHolder> {
 
     public Context context;
-    OnItemClickListener listener;
-    List<FeedArticleData> list;
+    private OnItemClickListener listener;
+    private List<FeedArticleData> list;
 
     public ProjectAdapter(Context context, List<FeedArticleData> list) {
         this.context = context;
         this.list = list;
     }
 
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    @NonNull
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         ItemProjectListBinding bindView = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.item_project_list, parent, false);
 
         MyViewHolder holder = new MyViewHolder(bindView);
-        bindView.getRoot().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        bindView.getRoot().setOnClickListener(view -> {
 
-                int position = (int) view.getTag();
-                if (listener != null) {
-                    listener.onItemClick(view, position);
-                }
+            int position = (int) view.getTag();
+            if (listener != null) {
+                listener.onItemClick(view, position);
             }
         });
         return holder;
@@ -65,9 +64,9 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyViewHo
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
-        public ItemProjectListBinding bindView;
+        ItemProjectListBinding bindView;
 
-        public MyViewHolder(ItemProjectListBinding bindView) {
+        MyViewHolder(ItemProjectListBinding bindView) {
             super(bindView.getRoot());
             this.bindView = bindView;
 
@@ -75,7 +74,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyViewHo
     }
 
     public interface OnItemClickListener {
-        public void onItemClick(View v, int position);
+        void onItemClick(View v, int position);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {

@@ -12,7 +12,7 @@ public final class RestApiProvider {
     private OkHttpClient mOkHttpClient;
     private static volatile RestApiProvider sInstance;
     private RestService restService;
-    public  final String BASE_URL = "https://www.wanandroid.com/";
+    private final String BASE_URL = "https://www.wanandroid.com/";
 
     private RestApiProvider() {
     }

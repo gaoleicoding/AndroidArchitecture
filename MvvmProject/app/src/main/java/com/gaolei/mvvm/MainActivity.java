@@ -4,21 +4,17 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-
-import androidx.annotation.NonNull;
-import androidx.databinding.DataBindingUtil;
-
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.gaolei.mvvm.activity.BaseActivity;
 import com.gaolei.mvvm.databinding.ActivityMainBinding;
@@ -27,7 +23,6 @@ import com.gaolei.mvvm.fragment.HomeFragment;
 import com.gaolei.mvvm.fragment.KnowledgeFragment;
 import com.gaolei.mvvm.fragment.NavigationFragment;
 import com.gaolei.mvvm.fragment.ProjectFragment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 
 import java.util.ArrayList;
@@ -52,7 +47,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initData(Bundle bundle) {
 
-        mFragments = new ArrayList<BaseFragment>();
+        mFragments = new ArrayList<>();
         mFragments.add(new HomeFragment());
         mFragments.add(new KnowledgeFragment());
         mFragments.add(new NavigationFragment());
@@ -65,32 +60,29 @@ public class MainActivity extends BaseActivity {
         }
         binding.bottomNavigationView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
 
-        binding.bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.tab_main_pager:
-                        binding.layoutHeader.title.setText(R.string.home_pager);
-                        switchFragment(0);
+        binding.bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.tab_main_pager:
+                    binding.layoutHeader.title.setText(R.string.home_pager);
+                    switchFragment(0);
 
-                        break;
-                    case R.id.tab_knowledge_hierarchy:
-                        binding.layoutHeader.title.setText(R.string.knowledge_hierarchy);
-                        switchFragment(1);
+                    break;
+                case R.id.tab_knowledge_hierarchy:
+                    binding.layoutHeader.title.setText(R.string.knowledge_hierarchy);
+                    switchFragment(1);
 
-                        break;
-                    case R.id.tab_navigation:
-                        binding.layoutHeader.title.setText(R.string.navigation);
-                        switchFragment(2);
+                    break;
+                case R.id.tab_navigation:
+                    binding.layoutHeader.title.setText(R.string.navigation);
+                    switchFragment(2);
 
-                        break;
-                    case R.id.tab_project:
-                        binding.layoutHeader.title.setText(R.string.project);
-                        switchFragment(3);
-                        break;
-                }
-                return true;
+                    break;
+                case R.id.tab_project:
+                    binding.layoutHeader.title.setText(R.string.project);
+                    switchFragment(3);
+                    break;
             }
+            return true;
         });
     }
 
@@ -115,9 +107,7 @@ public class MainActivity extends BaseActivity {
     }
 
     public void checkPermission() {
-        /**
-         * 第 1 步: 检查是否有相应的权限
-         */
+
         boolean isAllGranted = checkPermissionAllGranted(
                 permissionArray
         );
@@ -127,10 +117,6 @@ public class MainActivity extends BaseActivity {
             return;
         }
 
-        /**
-         * 第 2 步: 请求权限
-         */
-        // 一次请求多个权限, 如果其他有权限是已经授予的将会自动忽略掉
         ActivityCompat.requestPermissions(
                 this,
                 permissionArray,
@@ -187,14 +173,7 @@ public class MainActivity extends BaseActivity {
     private void getAppDetailSettingIntent(Context context) {
         Intent intent = new Intent();
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        if (Build.VERSION.SDK_INT >= 9) {
-            intent.setAction("android.settings.APPLICATION_DETAILS_SETTINGS");
-            intent.setData(Uri.fromParts("package", getPackageName(), null));
-        } else if (Build.VERSION.SDK_INT <= 8) {
-            intent.setAction(Intent.ACTION_VIEW);
-            intent.setClassName("com.android.settings", "com.android.settings.InstalledAppDetails");
-            intent.putExtra("com.android.settings.ApplicationPkgName", getPackageName());
-        }
+        intent.setAction("android.settings.APPLICATION_DETAILS_SETTINGS");
         startActivity(intent);
     }
 }

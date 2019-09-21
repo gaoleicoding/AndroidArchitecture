@@ -12,7 +12,7 @@ import androidx.databinding.DataBindingUtil;
 
 public class ProjectFragment extends BaseFragment {
 
-    FragmentProjectBinding binding;
+    private FragmentProjectBinding binding;
 
     @Override
     public void initView() {

@@ -12,7 +12,7 @@ import androidx.databinding.DataBindingUtil;
 
 public class KnowledgeFragment extends BaseFragment {
 
-    FragmentKnowledgeBinding binding;
+    private FragmentKnowledgeBinding binding;
 
     @Override
     public void initView() {

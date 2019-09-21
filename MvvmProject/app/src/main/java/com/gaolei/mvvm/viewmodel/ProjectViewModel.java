@@ -6,37 +6,29 @@ import com.gaolei.mvvm.mmodel.ProjectListData;
 import com.gaolei.mvvm.net.RestApiProvider;
 import com.gaolei.mvvm.net.RestService;
 
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ProjectViewModel extends BaseViewModel {
+public class ProjectViewModel extends AndroidViewModel {
 
+    public RestService gitHubService = RestApiProvider.getInstance().builder().getApiService();
     private MutableLiveData<ProjectListData> projectLiveData;
-    private MutableLiveData<ProjectParams> paramsLiveData;
-
-
-    private RestService gitHubService = RestApiProvider.getInstance().builder().getApiService();
-
 
     public ProjectViewModel(Application application) {
         super(application);
 
-        paramsLiveData = new MutableLiveData<>();
         projectLiveData = new MutableLiveData<>();
 
-//        projectObservable = Transformations.switchMap(paramsLiveData, input -> {
-//            ProjectParams params=paramsLiveData.getValue();
-//        return projectObservable = new ProjectRepository().getProjectInfo(params.page, params.cid);
-//        });
 
     }
 
-    public void setProjectParams(ProjectParams params) {
+    public void setProjectParams(int curPage, int cid) {
 
-        gitHubService.getProjectListData(params.page, params.cid).enqueue(new Callback<ProjectListData>() {
+        gitHubService.getProjectListData(curPage, cid).enqueue(new Callback<ProjectListData>() {
             @Override
             public void onResponse(Call<ProjectListData> call, Response<ProjectListData> response) {
                 projectLiveData.setValue(response.body());

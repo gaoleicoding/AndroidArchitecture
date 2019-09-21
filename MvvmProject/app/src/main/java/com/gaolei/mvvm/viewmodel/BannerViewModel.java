@@ -2,20 +2,22 @@ package com.gaolei.mvvm.viewmodel;
 
 import android.app.Application;
 
-import com.gaolei.mvvm.mmodel.BannerListData;
-
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+
+import com.gaolei.mvvm.mmodel.BannerListData;
+import com.gaolei.mvvm.net.RestApiProvider;
+import com.gaolei.mvvm.net.RestService;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class BannerViewModel extends BaseViewModel {
-    private static final String TAG = BannerViewModel.class.getName();
-
+public class BannerViewModel extends AndroidViewModel {
 
     private MutableLiveData<BannerListData> bannerLiveData;
-
+    private RestService gitHubService = RestApiProvider.getInstance().builder().getApiService();
 
     public BannerViewModel(Application application) {
         super(application);
@@ -26,7 +28,7 @@ public class BannerViewModel extends BaseViewModel {
         return bannerLiveData;
     }
 
-    public LiveData<BannerListData> getBanner() {
+    public void getBanner() {
 
         gitHubService.getBannerListData().enqueue(new Callback<BannerListData>() {
             @Override
@@ -41,8 +43,6 @@ public class BannerViewModel extends BaseViewModel {
 
 
         });
-
-        return bannerLiveData;
     }
 
 }

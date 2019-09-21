@@ -8,6 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import com.bumptech.glide.Glide;
 import com.gaolei.mvvm.R;
 import com.gaolei.mvvm.activity.ArticleDetailActivity;
@@ -22,16 +26,10 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
-import com.youth.banner.listener.OnBannerListener;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.annotation.Nullable;
-import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import java.util.Objects;
 
 
 public class HomeFragment extends BaseFragment {
@@ -81,7 +79,7 @@ public class HomeFragment extends BaseFragment {
         viewModel = ViewModelProviders.of(this)
                 .get(ProjectViewModel.class);
         observeViewModel(viewModel);
-        viewModel.setProjectParams(new ProjectViewModel.ProjectParams(mCurrentPage, 294));
+        viewModel.setProjectParams(mCurrentPage, 294);
 
         final BannerViewModel bannerViewModel = ViewModelProviders.of(this)
                 .get(BannerViewModel.class);
@@ -100,7 +98,7 @@ public class HomeFragment extends BaseFragment {
             @Override
             public void onLoadMore(RefreshLayout refreshLayout) {
                 ++mCurrentPage;
-                viewModel.setProjectParams(new ProjectViewModel.ProjectParams(mCurrentPage, 294));
+                viewModel.setProjectParams(mCurrentPage, 294);
             }
 
             @Override
@@ -112,35 +110,29 @@ public class HomeFragment extends BaseFragment {
 
     private void observeViewModel(final ProjectViewModel viewModel) {
         // Observe project data
-        viewModel.getObservableProject().observe(this, new Observer<ProjectListData>() {
-            @Override
-            public void onChanged(@Nullable ProjectListData listData) {
-                if (listData != null) {
-                    articleDataList.addAll(listData.data.getDatas());
-                    projectAdapter.notifyDataSetChanged();
-                    binding.smartRefreshLayout.finishLoadMore();
-                }
+        viewModel.getObservableProject().observe(this, listData -> {
+            if (listData != null) {
+                articleDataList.addAll(listData.data.getDatas());
+                projectAdapter.notifyDataSetChanged();
+                binding.smartRefreshLayout.finishLoadMore();
             }
         });
     }
 
     private void observeBannerViewModel(final BannerViewModel bannerViewModel) {
         // Observe banner data
-        bannerViewModel.getObservableBanner().observe(this, new Observer<BannerListData>() {
-            @Override
-            public void onChanged(@Nullable BannerListData listData) {
-                if (listData != null) {
-                    requstBannerList(listData);
-                }
+        bannerViewModel.getObservableBanner().observe(this, listData -> {
+            if (listData != null) {
+                requstBannerList(listData);
             }
         });
     }
 
-    public void requstBannerList(BannerListData itemBeans) {
+    private void requstBannerList(BannerListData itemBeans) {
 
-        final List<String> linkList = new ArrayList<String>();
-        List imageList = new ArrayList();
-        List titleList = new ArrayList();
+        final List<String> linkList = new ArrayList<>();
+        List<String> imageList = new ArrayList<>();
+        List<String> titleList = new ArrayList<>();
         int size = itemBeans.data.size();
         for (int i = 0; i < size; i++) {
             imageList.add(itemBeans.data.get(i).getImagePath());
@@ -150,7 +142,7 @@ public class HomeFragment extends BaseFragment {
         binding.banner.setImageLoader(new com.youth.banner.loader.ImageLoader() {
             @Override
             public void displayImage(Context context, Object path, ImageView imageView) {
-                Glide.with(getActivity()).load(path).into(imageView);
+                Glide.with(Objects.requireNonNull(getActivity())).load(path).into(imageView);
             }
         });
 
@@ -162,15 +154,12 @@ public class HomeFragment extends BaseFragment {
         binding.banner.setImages(imageList);//设置图片源
         binding.banner.setBannerTitles(titleList);//设置标题源
         binding.banner.start();
-        binding.banner.setOnBannerListener(new OnBannerListener() {
-            @Override
-            public void OnBannerClick(int position) {
-                Intent intent = new Intent(getActivity(), ArticleDetailActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("url", linkList.get(position));
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
+        binding.banner.setOnBannerListener(position -> {
+            Intent intent = new Intent(getActivity(), ArticleDetailActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("url", linkList.get(position));
+            intent.putExtras(bundle);
+            startActivity(intent);
         });
     }
 

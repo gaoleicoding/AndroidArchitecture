@@ -13,7 +13,7 @@ import androidx.databinding.DataBindingUtil;
 
 public class NavigationFragment extends BaseFragment {
 
-    FragmentNavigationBinding binding;
+    private FragmentNavigationBinding binding;
 
     @Override
     public void initView() {

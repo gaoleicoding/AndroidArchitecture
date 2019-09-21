@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 
 
 public abstract class BaseFragment extends Fragment implements View.OnClickListener {
-    FragmentBaseBinding binding;
+    private FragmentBaseBinding binding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
