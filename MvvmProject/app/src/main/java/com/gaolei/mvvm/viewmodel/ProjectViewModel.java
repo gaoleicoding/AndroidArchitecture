@@ -9,24 +9,24 @@ import com.gaolei.mvvm.net.RestService;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ProjectViewModel extends AndroidViewModel {
 
-    public RestService gitHubService = RestApiProvider.getInstance().builder().getApiService();
+    private RestService gitHubService;
     private MutableLiveData<ProjectListData> projectLiveData;
 
     public ProjectViewModel(Application application) {
         super(application);
 
         projectLiveData = new MutableLiveData<>();
-
-
+        gitHubService = RestApiProvider.getInstance().builder().getApiService();
     }
 
-    public void setProjectParams(int curPage, int cid) {
+    public void getProjects(int curPage, int cid) {
 
         gitHubService.getProjectListData(curPage, cid).enqueue(new Callback<ProjectListData>() {
             @Override
@@ -47,12 +47,4 @@ public class ProjectViewModel extends AndroidViewModel {
         return projectLiveData;
     }
 
-    public static class ProjectParams {
-        int page = 1, cid = 294;
-
-        public ProjectParams(int page, int cid) {
-            this.page = page;
-            this.cid = cid;
-        }
-    }
 }

@@ -36,7 +36,7 @@ public class HomeFragment extends BaseFragment {
 
     private ProjectAdapter projectAdapter;
     private FragmentHomeBinding binding;
-    private ProjectViewModel viewModel;
+    private ProjectViewModel projectViewModel;
     private int mCurrentPage = 1;
     private List<ProjectListData.FeedArticleData> articleDataList = new ArrayList<>();
 
@@ -76,15 +76,14 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public void initData(Bundle bundle) {
-        viewModel = ViewModelProviders.of(this)
-                .get(ProjectViewModel.class);
-        observeViewModel(viewModel);
-        viewModel.setProjectParams(mCurrentPage, 294);
+        projectViewModel = ViewModelProviders.of(this).get(ProjectViewModel.class);
+        observeProjectVM(projectViewModel);
+        projectViewModel.getProjects(mCurrentPage, 294);
 
         final BannerViewModel bannerViewModel = ViewModelProviders.of(this)
                 .get(BannerViewModel.class);
-        observeBannerViewModel(bannerViewModel);
-        bannerViewModel.getBanner();
+        observeBannerVM(bannerViewModel);
+        bannerViewModel.getBanners();
     }
 
 
@@ -98,7 +97,7 @@ public class HomeFragment extends BaseFragment {
             @Override
             public void onLoadMore(RefreshLayout refreshLayout) {
                 ++mCurrentPage;
-                viewModel.setProjectParams(mCurrentPage, 294);
+                projectViewModel.getProjects(mCurrentPage, 294);
             }
 
             @Override
@@ -108,7 +107,7 @@ public class HomeFragment extends BaseFragment {
         });
     }
 
-    private void observeViewModel(final ProjectViewModel viewModel) {
+    private void observeProjectVM(final ProjectViewModel viewModel) {
         // Observe project data
         viewModel.getObservableProject().observe(this, listData -> {
             if (listData != null) {
@@ -119,7 +118,7 @@ public class HomeFragment extends BaseFragment {
         });
     }
 
-    private void observeBannerViewModel(final BannerViewModel bannerViewModel) {
+    private void observeBannerVM(final BannerViewModel bannerViewModel) {
         // Observe banner data
         bannerViewModel.getObservableBanner().observe(this, listData -> {
             if (listData != null) {

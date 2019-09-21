@@ -17,18 +17,19 @@ import retrofit2.Response;
 public class BannerViewModel extends AndroidViewModel {
 
     private MutableLiveData<BannerListData> bannerLiveData;
-    private RestService gitHubService = RestApiProvider.getInstance().builder().getApiService();
+    private RestService gitHubService;
 
     public BannerViewModel(Application application) {
         super(application);
         bannerLiveData = new MutableLiveData<>();
+        gitHubService = RestApiProvider.getInstance().builder().getApiService();
     }
 
     public LiveData<BannerListData> getObservableBanner() {
         return bannerLiveData;
     }
 
-    public void getBanner() {
+    public void getBanners() {
 
         gitHubService.getBannerListData().enqueue(new Callback<BannerListData>() {
             @Override
