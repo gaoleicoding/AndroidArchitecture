@@ -22,7 +22,7 @@ public class BannerViewModel extends AndroidViewModel {
     public BannerViewModel(Application application) {
         super(application);
         bannerLiveData = new MutableLiveData<>();
-        gitHubService = RestApiProvider.getInstance().builder().getApiService();
+        gitHubService = RestApiProvider.getInstance().builder().get();
     }
 
     public LiveData<BannerListData> getObservableBanner() {

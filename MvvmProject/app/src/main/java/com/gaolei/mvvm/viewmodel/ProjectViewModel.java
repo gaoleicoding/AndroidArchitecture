@@ -23,7 +23,7 @@ public class ProjectViewModel extends AndroidViewModel {
         super(application);
 
         projectLiveData = new MutableLiveData<>();
-        gitHubService = RestApiProvider.getInstance().builder().getApiService();
+        gitHubService = RestApiProvider.getInstance().builder().get();
     }
 
     public void getProjects(int curPage, int cid) {

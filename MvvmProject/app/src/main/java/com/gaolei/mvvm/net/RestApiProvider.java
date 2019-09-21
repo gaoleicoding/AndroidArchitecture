@@ -45,7 +45,7 @@ public final class RestApiProvider {
         return sInstance;
     }
 
-    public RestService getApiService() {
+    public RestService get() {
         if (restService == null)
             restService = mRetrofit.create(RestService.class);
         return restService;
