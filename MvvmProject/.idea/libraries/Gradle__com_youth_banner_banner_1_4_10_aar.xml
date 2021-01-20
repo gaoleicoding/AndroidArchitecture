@@ -3,6 +3,18 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a47922ea42df11655df8909dad31efa8/jetified-banner-1.4.10/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a47922ea42df11655df8909dad31efa8/jetified-banner-1.4.10/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2f7d31c433b1eb163897fa3b70cb233d/jetified-banner-1.4.10/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2f7d31c433b1eb163897fa3b70cb233d/jetified-banner-1.4.10/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2f7d31c433b1eb163897fa3b70cb233d/jetified-banner-1.4.10/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7787c45195d2161a5bff2c79b3488f89/jetified-banner-1.4.10/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7787c45195d2161a5bff2c79b3488f89/jetified-banner-1.4.10/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7787c45195d2161a5bff2c79b3488f89/jetified-banner-1.4.10/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/52f70e7167ccd357cb1e4d2801efa460/jetified-banner-1.4.10/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/52f70e7167ccd357cb1e4d2801efa460/jetified-banner-1.4.10/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/52f70e7167ccd357cb1e4d2801efa460/jetified-banner-1.4.10/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2036f653562ff719ff453d572f1041d/jetified-banner-1.4.10/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2036f653562ff719ff453d572f1041d/jetified-banner-1.4.10/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2036f653562ff719ff453d572f1041d/jetified-banner-1.4.10/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

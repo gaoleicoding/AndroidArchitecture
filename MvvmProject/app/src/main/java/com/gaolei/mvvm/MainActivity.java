@@ -4,7 +4,6 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -23,9 +22,12 @@ import com.gaolei.mvvm.fragment.HomeFragment;
 import com.gaolei.mvvm.fragment.KnowledgeFragment;
 import com.gaolei.mvvm.fragment.NavigationFragment;
 import com.gaolei.mvvm.fragment.ProjectFragment;
+import com.gaolei.mvvm.model.PageTitle;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashSet;
 
 public class MainActivity extends BaseActivity {
 
@@ -37,11 +39,14 @@ public class MainActivity extends BaseActivity {
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
     };
     ActivityMainBinding binding;
+    private PageTitle titleData;
 
     @Override
     protected void initView() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.layoutHeader.title.setText(getString(R.string.home_pager));
+        titleData = new PageTitle();
+        titleData.setTitle(getString(R.string.home_pager));
+        binding.setTitle(titleData);
     }
 
     @Override
@@ -63,22 +68,26 @@ public class MainActivity extends BaseActivity {
         binding.bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.tab_main_pager:
-                    binding.layoutHeader.title.setText(R.string.home_pager);
+                    titleData.setTitle(getString(R.string.home_pager));
+                    binding.setTitle(titleData);
                     switchFragment(0);
 
                     break;
                 case R.id.tab_knowledge_hierarchy:
-                    binding.layoutHeader.title.setText(R.string.knowledge_hierarchy);
+                    titleData.setTitle(getString(R.string.knowledge_hierarchy));
+                    binding.setTitle(titleData);
                     switchFragment(1);
 
                     break;
                 case R.id.tab_navigation:
-                    binding.layoutHeader.title.setText(R.string.navigation);
+                    titleData.setTitle(getString(R.string.navigation));
+                    binding.setTitle(titleData);
                     switchFragment(2);
 
                     break;
                 case R.id.tab_project:
-                    binding.layoutHeader.title.setText(R.string.project);
+                    titleData.setTitle(getString(R.string.project));
+                    binding.setTitle(titleData);
                     switchFragment(3);
                     break;
             }

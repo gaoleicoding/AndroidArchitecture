@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import com.bumptech.glide.Glide;
 import com.gaolei.mvvm.R;
 import com.gaolei.mvvm.databinding.ItemProjectListBinding;
-import com.gaolei.mvvm.mmodel.ProjectListData.FeedArticleData;
+import com.gaolei.mvvm.model.ProjectListData.FeedArticleData;
 
 import java.util.List;
 

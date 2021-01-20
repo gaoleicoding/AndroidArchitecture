@@ -1,8 +1,8 @@
 package com.gaolei.mvvm.net;
 
 
-import com.gaolei.mvvm.mmodel.BannerListData;
-import com.gaolei.mvvm.mmodel.ProjectListData;
+import com.gaolei.mvvm.model.BannerListData;
+import com.gaolei.mvvm.model.ProjectListData;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

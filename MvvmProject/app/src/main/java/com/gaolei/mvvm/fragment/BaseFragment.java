@@ -35,13 +35,10 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
 
     public abstract void initData(Bundle bundle);
 
-
-
     private void initBaseView(FragmentBaseBinding binding) {
         if (!NetworkUtil.isNetworkAvailable(getActivity()))
             binding.baseErrorLayout.llBaseErrorContent.setVisibility(View.VISIBLE);
         binding.baseErrorLayout.btErrorRefresh.setOnClickListener(this);
-        return;
     }
 
     /**
@@ -66,7 +63,6 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     public void setLoading(boolean isShow) {
         binding.llLoading.setVisibility(isShow ? View.VISIBLE : View.GONE);
     }
-
 
     @Override
     public void onClick(View v) {

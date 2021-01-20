@@ -18,8 +18,8 @@ import com.gaolei.mvvm.activity.ArticleDetailActivity;
 import com.gaolei.mvvm.adapter.DividerItemDecoration;
 import com.gaolei.mvvm.adapter.ProjectAdapter;
 import com.gaolei.mvvm.databinding.FragmentHomeBinding;
-import com.gaolei.mvvm.mmodel.BannerListData;
-import com.gaolei.mvvm.mmodel.ProjectListData;
+import com.gaolei.mvvm.model.BannerListData;
+import com.gaolei.mvvm.model.ProjectListData;
 import com.gaolei.mvvm.viewmodel.BannerViewModel;
 import com.gaolei.mvvm.viewmodel.ProjectViewModel;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -38,7 +38,7 @@ public class HomeFragment extends BaseFragment {
     private FragmentHomeBinding binding;
     private ProjectViewModel projectViewModel;
     private int mCurrentPage = 1;
-    private List<ProjectListData.FeedArticleData> articleDataList = new ArrayList<>();
+    private final List<ProjectListData.FeedArticleData> articleDataList = new ArrayList<>();
 
     @Override
     public View getContentLayout(LayoutInflater inflater, ViewGroup container) {
@@ -56,6 +56,7 @@ public class HomeFragment extends BaseFragment {
     @Override
     public void initView() {
         initSmartRefreshLayout();
+
         projectAdapter = new ProjectAdapter(getActivity(), articleDataList);
 
         binding.projectRecyclerview.addItemDecoration(new DividerItemDecoration(getActivity(),
@@ -76,6 +77,8 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public void initData(Bundle bundle) {
+
+
         projectViewModel = ViewModelProviders.of(this).get(ProjectViewModel.class);
         observeProjectVM(projectViewModel);
         projectViewModel.getProjects(mCurrentPage, 294);
@@ -85,7 +88,6 @@ public class HomeFragment extends BaseFragment {
         observeBannerVM(bannerViewModel);
         bannerViewModel.getBanners();
     }
-
 
     //初始化下拉刷新控件
     private void initSmartRefreshLayout() {

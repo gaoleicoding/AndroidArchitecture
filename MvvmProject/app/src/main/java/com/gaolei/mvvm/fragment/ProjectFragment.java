@@ -5,10 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.databinding.DataBindingUtil;
+
 import com.gaolei.mvvm.R;
 import com.gaolei.mvvm.databinding.FragmentProjectBinding;
-
-import androidx.databinding.DataBindingUtil;
 
 public class ProjectFragment extends BaseFragment {
 

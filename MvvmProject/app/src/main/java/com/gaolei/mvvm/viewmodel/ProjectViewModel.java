@@ -2,7 +2,7 @@ package com.gaolei.mvvm.viewmodel;
 
 import android.app.Application;
 
-import com.gaolei.mvvm.mmodel.ProjectListData;
+import com.gaolei.mvvm.model.ProjectListData;
 import com.gaolei.mvvm.net.RestApiProvider;
 import com.gaolei.mvvm.net.RestService;
 
@@ -16,8 +16,8 @@ import retrofit2.Response;
 
 public class ProjectViewModel extends AndroidViewModel {
 
-    private RestService gitHubService;
-    private MutableLiveData<ProjectListData> projectLiveData;
+    private final RestService gitHubService;
+    private final MutableLiveData<ProjectListData> projectLiveData;
 
     public ProjectViewModel(Application application) {
         super(application);

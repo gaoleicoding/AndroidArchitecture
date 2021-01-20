@@ -14,13 +14,13 @@
         android:id="@+id/img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/alert_dialog_icon" />
+        android:src="@drawable/common_icon_loading" />
 
     <TextView
         android:id="@+id/tipTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:text="数据加载中……"
         android:textColor="#03afff"
         android:textSize="18sp" />

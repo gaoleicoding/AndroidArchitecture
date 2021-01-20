@@ -6,7 +6,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.gaolei.mvvm.mmodel.BannerListData;
+import com.gaolei.mvvm.model.BannerListData;
 import com.gaolei.mvvm.net.RestApiProvider;
 import com.gaolei.mvvm.net.RestService;
 
@@ -16,8 +16,8 @@ import retrofit2.Response;
 
 public class BannerViewModel extends AndroidViewModel {
 
-    private MutableLiveData<BannerListData> bannerLiveData;
-    private RestService gitHubService;
+    private final MutableLiveData<BannerListData> bannerLiveData;
+    private final RestService gitHubService;
 
     public BannerViewModel(Application application) {
         super(application);
@@ -41,7 +41,6 @@ public class BannerViewModel extends AndroidViewModel {
             public void onFailure(Call<BannerListData> call, Throwable t) {
                 bannerLiveData.setValue(null);
             }
-
 
         });
     }

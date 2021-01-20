@@ -1,22 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
 
     <data>
 
+        <import type="android.view.View" />
+
+        <variable
+            name="eventlistener"
+            type="com.gaolei.mvvm.fragment.KnowledgeFragment.EventListener" />
+
+        <variable
+            name="item"
+            type="com.gaolei.mvvm.model.KnowledgeItem" />
     </data>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_centerInParent="true"
-            android:text="@string/knowledge_hierarchy" />
+            android:background="@color/color_c9c9c9"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="10dp"
+                app:imageUrl="@{item.imgUrl}" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text='@{item.knowledgeContent}'
+                android:textSize="14sp"
+                tools:text="content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:drawableStart="@drawable/icon_praise"
+                android:onClick="@{(view)->eventlistener.clickPraise(view)}"
+                android:text='@{item.praiseCount+""}'
+                android:textSize="18sp"
+                tools:text="1" />
 
 
-    </RelativeLayout>
+        </LinearLayout>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="12dp"
+            android:hint="@string/hint_change_content"
+            android:text="@={item.knowledgeContent}" />
+
+    </LinearLayout>
 </layout>

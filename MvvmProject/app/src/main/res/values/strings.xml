@@ -12,4 +12,7 @@
     <string name="loading">加载中...</string>
     <string name="refresh">刷新</string>
     <string name="article_detail">文章详情</string>
+    <string name="hint_change_content">改变上面的内容</string>
+    <string name="android_desc">安卓是一种基于Linux内核（不包含GNU组件）的自由及开放源代码的操作系统。</string>
+
 </resources>
