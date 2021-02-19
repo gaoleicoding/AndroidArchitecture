@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MvvmProject.iml" filepath="$PROJECT_DIR$/MvvmProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MvvmProject.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MvvmProject.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/databinding/MvvmProject.databinding.iml" filepath="$PROJECT_DIR$/.idea/modules/databinding/MvvmProject.databinding.iml" />
     </modules>
   </component>
 </project>

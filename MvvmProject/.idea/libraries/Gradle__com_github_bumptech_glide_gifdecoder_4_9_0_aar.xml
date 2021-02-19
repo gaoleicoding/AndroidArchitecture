@@ -6,6 +6,7 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4e92166c2054307731f09772b953faa5/jetified-gifdecoder-4.9.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1062b5f3fc7da57ffbbfe03410aa19d4/jetified-gifdecoder-4.9.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f48939b3b6b98554b8b02aa319eb81e6/jetified-gifdecoder-4.9.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f4c0b21fa685d33dbc886ace561f89e/jetified-gifdecoder-4.9.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5de976216f5380214cefdee5a88cdf78/jetified-gifdecoder-4.9.0/jars/classes.jar!/" />
@@ -23,6 +24,10 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f48939b3b6b98554b8b02aa319eb81e6/jetified-gifdecoder-4.9.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f48939b3b6b98554b8b02aa319eb81e6/jetified-gifdecoder-4.9.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f48939b3b6b98554b8b02aa319eb81e6/jetified-gifdecoder-4.9.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/459d83c32e188da74c387ad2ee27bd04/jetified-gifdecoder-4.9.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f4c0b21fa685d33dbc886ace561f89e/jetified-gifdecoder-4.9.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f4c0b21fa685d33dbc886ace561f89e/jetified-gifdecoder-4.9.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f4c0b21fa685d33dbc886ace561f89e/jetified-gifdecoder-4.9.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/4.9.0/5a535e1ca9189de869e65c35ebf5f76b565e6c07/gifdecoder-4.9.0-javadoc.jar!/" />
