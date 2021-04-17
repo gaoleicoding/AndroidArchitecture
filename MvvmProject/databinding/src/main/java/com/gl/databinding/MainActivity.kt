@@ -1,4 +1,4 @@
-package com.example.administrator.databindingapp
+package com.gl.databinding
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

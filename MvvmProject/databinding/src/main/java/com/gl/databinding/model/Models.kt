@@ -1,4 +1,4 @@
-package com.example.administrator.databindingapp.model
+package com.gl.databinding.model
 
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable

@@ -2,20 +2,23 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
+
         <variable
             name="viewUtils"
-            type="com.example.administrator.databindingapp.util.ViewUtils"></variable>
+            type="com.gl.databinding.util.ViewUtils" />
+
         <variable
             name="dayNight"
-            type="com.example.administrator.databindingapp.model.DayNight"></variable>
+            type="com.gl.databinding.model.DayNight" />
+
         <variable
             name="handlers"
-            type="com.example.administrator.databindingapp.util.MyHandlers"></variable>
+            type="com.gl.databinding.util.MyHandlers" />
     </data>
     <LinearLayout
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <com.example.administrator.databindingapp.ui.view.CustomerTextView
+        <com.gl.databinding.ui.view.CustomerTextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

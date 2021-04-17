@@ -1,4 +1,4 @@
-package com.example.administrator.databindingapp.ui.view
+package com.gl.databinding.ui.view
 
 import android.content.Context
 import android.util.AttributeSet

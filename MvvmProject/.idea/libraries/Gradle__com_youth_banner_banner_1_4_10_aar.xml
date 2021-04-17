@@ -18,6 +18,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1da98f2bb055e96b74c1e6fd2295ddb4/jetified-banner-1.4.10/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1da98f2bb055e96b74c1e6fd2295ddb4/jetified-banner-1.4.10/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1da98f2bb055e96b74c1e6fd2295ddb4/jetified-banner-1.4.10/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58e7d2aed8582ece659e413bf1fd9cbb/jetified-banner-1.4.10/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58e7d2aed8582ece659e413bf1fd9cbb/jetified-banner-1.4.10/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58e7d2aed8582ece659e413bf1fd9cbb/jetified-banner-1.4.10/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

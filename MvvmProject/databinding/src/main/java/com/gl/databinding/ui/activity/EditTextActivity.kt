@@ -1,4 +1,4 @@
-package com.example.administrator.databindingapp.ui.activity
+package com.gl.databinding.ui.activity
 
 import android.os.Bundle
 import android.os.Handler
@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
-import com.example.administrator.databindingapp.model.ShowHide
-import com.example.administrator.databindingapp.model.Teacher2
+import com.gl.databinding.model.ShowHide
+import com.gl.databinding.model.Teacher2
 import com.gl.databinding.R
 import com.gl.databinding.databinding.ActivityEdittextBinding
 

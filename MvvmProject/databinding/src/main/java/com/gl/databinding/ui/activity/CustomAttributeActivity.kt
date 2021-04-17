@@ -1,12 +1,12 @@
-package com.example.administrator.databindingapp.ui.activity
+package com.gl.databinding.ui.activity
 
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ObservableBoolean
-import com.example.administrator.databindingapp.model.DayNight
-import com.example.administrator.databindingapp.util.MyHandlers
+import com.gl.databinding.model.DayNight
+import com.gl.databinding.util.MyHandlers
 import com.gl.databinding.R
 import com.gl.databinding.databinding.ActivityCustomattributeBinding
 

@@ -1,8 +1,8 @@
-package com.example.administrator.databindingapp.ui.activity
+package com.gl.databinding.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.administrator.databindingapp.ui.fargment.BaseSampleFragment
+import com.gl.databinding.ui.fargment.BaseSampleFragment
 import com.gl.databinding.R
 
 class BaseSampleFragmentActivity : AppCompatActivity() {

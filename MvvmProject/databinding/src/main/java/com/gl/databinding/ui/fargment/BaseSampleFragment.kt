@@ -1,4 +1,4 @@
-package com.example.administrator.databindingapp.ui.fargment
+package com.gl.databinding.ui.fargment
 
 import android.os.Bundle
 import android.util.Log
@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.Observable
 import androidx.databinding.OnRebindCallback
 import androidx.fragment.app.Fragment
-import com.example.administrator.databindingapp.model.Teacher
+import com.gl.databinding.model.Teacher
 import com.gl.databinding.R
 import com.gl.databinding.databinding.ActivityBasesampleBinding
 

@@ -1,12 +1,12 @@
-package com.example.administrator.databindingapp.ui.activity
+package com.gl.databinding.ui.activity
 
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ObservableField
-import com.example.administrator.databindingapp.model.Teacher2
-import com.example.administrator.databindingapp.model.Teacher3
+import com.gl.databinding.model.Teacher2
+import com.gl.databinding.model.Teacher3
 import com.gl.databinding.R
 import com.gl.databinding.databinding.ActivityBaseobservablesampleBinding
 

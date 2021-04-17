@@ -1,4 +1,4 @@
-package com.example.administrator.databindingapp.util
+package com.gl.databinding.util
 
 import android.graphics.Color
 import android.os.Handler
@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.administrator.databindingapp.impl.ClickEventImpl
+import com.gl.databinding.impl.ClickEventImpl
 
 class ViewUtils {
     companion object {

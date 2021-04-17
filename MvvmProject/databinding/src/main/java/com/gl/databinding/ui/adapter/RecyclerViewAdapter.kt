@@ -1,12 +1,14 @@
-package com.example.administrator.databindingapp.ui.adapter
+package com.gl.databinding.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
-import com.example.administrator.databindingapp.model.Teacher2
-import com.example.administrator.databindingapp.util.MyHandlers
+import com.gl.databinding.model.Teacher2
+import com.gl.databinding.util.MyHandlers
+import com.gl.databinding.BR
+import com.gl.databinding.R
 import com.gl.databinding.databinding.AdapterRecyclerviewBinding
 
 class RecyclerViewAdapter(private val teachers: ArrayList<Teacher2>) : RecyclerView.Adapter<RecyclerViewAdapter.RecyclerViewHolder>() {

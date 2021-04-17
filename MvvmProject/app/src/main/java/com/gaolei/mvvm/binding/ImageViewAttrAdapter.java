@@ -20,7 +20,7 @@ public class ImageViewAttrAdapter {
         view.setImageResource(resId);
     }
 
-    @BindingAdapter({"app:imageUrl"})
+    @BindingAdapter({"imageUrl"})
     public static void jloadImage(ImageView imageView, String url) {
         Glide.with(imageView.getContext()).load(url)
                 .placeholder(R.drawable.img_default)

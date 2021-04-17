@@ -1,4 +1,4 @@
-package com.example.administrator.databindingapp.util
+package com.gl.databinding.util
 
 import android.view.View
 import android.widget.Toast

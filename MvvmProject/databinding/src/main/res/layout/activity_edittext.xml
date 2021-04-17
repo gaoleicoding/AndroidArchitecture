@@ -2,12 +2,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
+
         <variable
             name="teacher2"
-            type="com.example.administrator.databindingapp.model.Teacher2"></variable>
+            type="com.gl.databinding.model.Teacher2" />
+
         <variable
             name="showhide"
-            type="com.example.administrator.databindingapp.model.ShowHide"></variable>
+            type="com.gl.databinding.model.ShowHide" />
     </data>
     <LinearLayout
         android:orientation="vertical" android:layout_width="match_parent"
@@ -25,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dip"
             android:text="@={teacher2.name}"/>
-        <com.example.administrator.databindingapp.ui.view.VisibleView2
+        <com.gl.databinding.ui.view.VisibleView2
             android:id="@+id/view_inversebinding"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

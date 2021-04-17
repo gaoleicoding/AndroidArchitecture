@@ -1,4 +1,4 @@
-package com.example.administrator.databindingapp.impl
+package com.gl.databinding.impl
 
 import android.view.View
 

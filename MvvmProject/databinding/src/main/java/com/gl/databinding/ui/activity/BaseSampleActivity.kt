@@ -1,11 +1,11 @@
-package com.example.administrator.databindingapp.ui.activity
+package com.gl.databinding.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.example.administrator.databindingapp.model.Course
-import com.example.administrator.databindingapp.model.Student
-import com.example.administrator.databindingapp.model.Teacher
+import com.gl.databinding.model.Course
+import com.gl.databinding.model.Student
+import com.gl.databinding.model.Teacher
 import com.gl.databinding.R
 import com.gl.databinding.databinding.ActivityBasesampleBinding
 

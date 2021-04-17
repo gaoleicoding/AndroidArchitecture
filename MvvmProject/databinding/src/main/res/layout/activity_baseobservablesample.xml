@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
+
         <variable
             name="teacher2"
-            type="com.example.administrator.databindingapp.model.Teacher2"></variable>
+            type="com.gl.databinding.model.Teacher2" />
+
         <variable
             name="teacher3"
-            type="com.example.administrator.databindingapp.model.Teacher3"></variable>
+            type="com.gl.databinding.model.Teacher3" />
     </data>
     <LinearLayout
         android:orientation="vertical" android:layout_width="match_parent"

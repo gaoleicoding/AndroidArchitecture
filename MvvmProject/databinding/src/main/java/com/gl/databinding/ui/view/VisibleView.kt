@@ -1,4 +1,4 @@
-package com.example.administrator.databindingapp.ui.view
+package com.gl.databinding.ui.view
 
 import android.content.Context
 import android.util.AttributeSet
@@ -19,7 +19,7 @@ class VisibleView : View {
         fun change()
     }
 
-    override fun onVisibilityChanged(changedView: View?, visibility: Int) {
+    override fun onVisibilityChanged(changedView: View, visibility: Int) {
         super.onVisibilityChanged(changedView, visibility)
         listener?.change()
     }
