@@ -16,44 +16,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b1018c7-19ae-4187-b291-ce1a242c6cd1" name="Default" comment="1、解决编译不通过问题">
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_1_0_beta01_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_extensions_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_process_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_service_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_1_0_beta01_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_3_0_alpha02_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_3_0_alpha02_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_3_0_alpha02_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_3_0_alpha02_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_0_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager2_viewpager2_1_0_0_beta03_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_annotations_4_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_disklrucache_4_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_9_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_9_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_1_0_alpha10_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_10_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_annotations_10_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_runtime_10_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_retrofit_2_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MvvmProject.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MvvmProject.app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/databinding/MvvmProject.databinding.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/databinding/MvvmProject.databinding.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databinding/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/databinding/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +32,7 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_2_API_30]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -112,6 +80,7 @@
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="android-custom-view/Users/gl/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.1.0-alpha10/9c3b119abe18aec3b44b5c460e9cb9724b68ec4d/material-1.1.0-alpha10-sources.jar!/com/google/android/material/bottomnavigation/BottomNavigationView.java_SELECTED" value="BottomNavigationView" />
     <property name="android-custom-view/Users/gl/gaolei/Android/Note/MVVM/MvvmDemo/MvvmProject/app/src/main/java/com/gaolei/mvvm/utils/StatusBarView.java_SELECTED" value="StatusBarView" />
     <property name="android-custom-view/Users/gl/gaolei/Android/Note/MVVM/MvvmDemo/MvvmProject/app/src/main/java/com/gaolei/mvvm/view/Html5Webview.java_SELECTED" value="Html5Webview" />
@@ -162,7 +131,7 @@
       <recent name="$PROJECT_DIR$/databinding/src/main/res/layout" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager" selected="Android App.databinding">
     <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -379,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618668169460</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1、解决编译不通过问题">
+      <created>1618668472806</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1618668472806</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -403,11 +379,11 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="489" y="213" key="AndroidProcessChooserDialog/0.25.1440.875@0.25.1440.875" timestamp="1611146014043" />
-    <state x="1440" y="37" key="CommitChangelistDialog2" timestamp="1618668168595">
+    <state x="1440" y="37" key="CommitChangelistDialog2" timestamp="1618705273415">
       <screen x="1440" y="25" width="1920" height="1055" />
     </state>
     <state x="0" y="35" key="CommitChangelistDialog2/0.25.1440.875/1440.25.1920.1055@0.25.1440.875" timestamp="1618662831835" />
-    <state x="1440" y="37" key="CommitChangelistDialog2/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618668168595" />
+    <state x="1440" y="37" key="CommitChangelistDialog2/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618705273415" />
     <state x="0" y="35" key="CommitChangelistDialog2/0.25.1440.875@0.25.1440.875" timestamp="1613994466560" />
     <state x="100" y="125" width="1240" height="675" key="DiffContextDialog" timestamp="1611113621580">
       <screen x="0" y="25" width="1440" height="875" />
@@ -461,11 +437,11 @@
       <screen x="1440" y="25" width="1920" height="1055" />
     </state>
     <state x="2000" y="289" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618668172627" />
-    <state x="1989" y="256" width="1058" height="591" key="find.popup" timestamp="1618667526505">
+    <state x="1989" y="256" width="1058" height="591" key="find.popup" timestamp="1618670472654">
       <screen x="1440" y="25" width="1920" height="1055" />
     </state>
     <state x="412" y="217" width="793" height="490" key="find.popup/0.25.1440.875/1440.25.1920.1055@0.25.1440.875" timestamp="1618662759927" />
-    <state x="1989" y="256" width="1058" height="591" key="find.popup/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618667526505" />
+    <state x="1989" y="256" width="1058" height="591" key="find.popup/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618670472654" />
     <state x="412" y="217" width="615" height="490" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1611126943239" />
     <state x="1953" y="253" width="894" height="816" key="search.everywhere.popup" timestamp="1618666650862">
       <screen x="1440" y="25" width="1920" height="1055" />
