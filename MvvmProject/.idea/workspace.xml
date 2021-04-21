@@ -9,19 +9,26 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b1018c7-19ae-4187-b291-ce1a242c6cd1" name="Default" comment="1、解决编译不通过问题">
+    <list default="true" id="5b1018c7-19ae-4187-b291-ce1a242c6cd1" name="Default" comment="1、解决报错问题">
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/databinding/MvvmProject.databinding.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/databinding/MvvmProject.databinding.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databinding/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/databinding/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +39,7 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@/Users/gl/.android/avd/Pixel_2_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -131,7 +138,7 @@
       <recent name="$PROJECT_DIR$/databinding/src/main/res/layout" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.databinding">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -151,6 +158,7 @@
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -208,6 +216,7 @@
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -265,6 +274,7 @@
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -330,6 +340,7 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -355,100 +366,74 @@
       <option name="project" value="LOCAL" />
       <updated>1618668472806</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1、升级gradle">
+      <created>1618706118078</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1618706118079</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1、解决报错问题">
+      <created>1619023179142</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619023179142</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1、解决编译不通过问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="1、解决编译不通过问题" />
+    <MESSAGE value="1、升级gradle" />
+    <MESSAGE value="1、解决报错问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、解决报错问题" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser" timestamp="1611123772908">
-      <screen x="0" y="25" width="1440" height="875" />
+    <state x="2144" y="447" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1618705835412">
+      <screen x="1440" y="25" width="1920" height="1055" />
     </state>
-    <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser/0.25.1440.875@0.25.1440.875" timestamp="1611123772908" />
-    <state x="201" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611115498826">
-      <screen x="0" y="25" width="1440" height="875" />
-    </state>
-    <state x="201" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1440.875@0.25.1440.875" timestamp="1611115498826" />
-    <state x="100" y="125" width="1240" height="675" key="AVDManager" timestamp="1611145900234">
-      <screen x="0" y="25" width="1440" height="875" />
-    </state>
-    <state x="100" y="125" width="1240" height="675" key="AVDManager/0.25.1440.875@0.25.1440.875" timestamp="1611145900234" />
-    <state x="489" y="213" key="AndroidProcessChooserDialog" timestamp="1611146014043">
-      <screen x="0" y="25" width="1440" height="875" />
-    </state>
-    <state x="489" y="213" key="AndroidProcessChooserDialog/0.25.1440.875@0.25.1440.875" timestamp="1611146014043" />
-    <state x="1440" y="37" key="CommitChangelistDialog2" timestamp="1618705273415">
+    <state x="2144" y="447" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618705835412" />
+    <state x="1440" y="37" key="CommitChangelistDialog2" timestamp="1620308173261">
       <screen x="1440" y="25" width="1920" height="1055" />
     </state>
     <state x="0" y="35" key="CommitChangelistDialog2/0.25.1440.875/1440.25.1920.1055@0.25.1440.875" timestamp="1618662831835" />
-    <state x="1440" y="37" key="CommitChangelistDialog2/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618705273415" />
-    <state x="0" y="35" key="CommitChangelistDialog2/0.25.1440.875@0.25.1440.875" timestamp="1613994466560" />
-    <state x="100" y="125" width="1240" height="675" key="DiffContextDialog" timestamp="1611113621580">
+    <state x="1440" y="37" key="CommitChangelistDialog2/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1620308173261" />
+    <state x="0" y="35" key="CommitChangelistDialog2/0.25.1440.875@0.25.1440.875" timestamp="1619023178365" />
+    <state x="100" y="125" width="1240" height="675" key="DiffContextDialog" timestamp="1619023112599">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="100" y="125" width="1240" height="675" key="DiffContextDialog/0.25.1440.875@0.25.1440.875" timestamp="1611113621580" />
+    <state x="100" y="125" width="1240" height="675" key="DiffContextDialog/0.25.1440.875@0.25.1440.875" timestamp="1619023112599" />
     <state width="1878" height="57" key="GridCell.Tab.0.bottom" timestamp="1618667030894">
       <screen x="1440" y="25" width="1920" height="1055" />
     </state>
     <state width="1878" height="57" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618667030894" />
-    <state width="1398" height="220" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1611146014284" />
     <state width="1878" height="57" key="GridCell.Tab.0.center" timestamp="1618667030893">
       <screen x="1440" y="25" width="1920" height="1055" />
     </state>
     <state width="1878" height="57" key="GridCell.Tab.0.center/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618667030893" />
-    <state width="1398" height="220" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1611146014282" />
     <state width="1878" height="57" key="GridCell.Tab.0.left" timestamp="1618667030892">
       <screen x="1440" y="25" width="1920" height="1055" />
     </state>
     <state width="1878" height="57" key="GridCell.Tab.0.left/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618667030892" />
-    <state width="1398" height="220" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1611146014281" />
     <state width="1878" height="57" key="GridCell.Tab.0.right" timestamp="1618667030893">
       <screen x="1440" y="25" width="1920" height="1055" />
     </state>
     <state width="1878" height="57" key="GridCell.Tab.0.right/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618667030893" />
-    <state width="1398" height="220" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1611146014283" />
-    <state width="1878" height="206" key="GridCell.Tab.1.bottom" timestamp="1611369946033">
-      <screen x="1440" y="25" width="1920" height="1055" />
-    </state>
-    <state width="1878" height="206" key="GridCell.Tab.1.bottom/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1611369946033" />
-    <state width="1398" height="220" key="GridCell.Tab.1.bottom/0.25.1440.875@0.25.1440.875" timestamp="1611146016785" />
-    <state width="1878" height="206" key="GridCell.Tab.1.center" timestamp="1611369946033">
-      <screen x="1440" y="25" width="1920" height="1055" />
-    </state>
-    <state width="1878" height="206" key="GridCell.Tab.1.center/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1611369946033" />
-    <state width="1398" height="220" key="GridCell.Tab.1.center/0.25.1440.875@0.25.1440.875" timestamp="1611146016784" />
-    <state width="1878" height="206" key="GridCell.Tab.1.left" timestamp="1611369946033">
-      <screen x="1440" y="25" width="1920" height="1055" />
-    </state>
-    <state width="1878" height="206" key="GridCell.Tab.1.left/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1611369946033" />
-    <state width="1398" height="220" key="GridCell.Tab.1.left/0.25.1440.875@0.25.1440.875" timestamp="1611146016784" />
-    <state width="1878" height="206" key="GridCell.Tab.1.right" timestamp="1611369946033">
-      <screen x="1440" y="25" width="1920" height="1055" />
-    </state>
-    <state width="1878" height="206" key="GridCell.Tab.1.right/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1611369946033" />
-    <state width="1398" height="220" key="GridCell.Tab.1.right/0.25.1440.875@0.25.1440.875" timestamp="1611146016785" />
-    <state x="221" y="97" key="SettingsEditor" timestamp="1611649163641">
-      <screen x="0" y="25" width="1440" height="875" />
-    </state>
-    <state x="221" y="97" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1611649163641" />
     <state x="2000" y="289" key="Vcs.Push.Dialog.v2" timestamp="1618668172627">
       <screen x="1440" y="25" width="1920" height="1055" />
     </state>
     <state x="2000" y="289" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618668172627" />
-    <state x="1989" y="256" width="1058" height="591" key="find.popup" timestamp="1618670472654">
+    <state x="1989" y="256" width="1058" height="591" key="find.popup" timestamp="1619745764455">
       <screen x="1440" y="25" width="1920" height="1055" />
     </state>
     <state x="412" y="217" width="793" height="490" key="find.popup/0.25.1440.875/1440.25.1920.1055@0.25.1440.875" timestamp="1618662759927" />
-    <state x="1989" y="256" width="1058" height="591" key="find.popup/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618670472654" />
-    <state x="412" y="217" width="615" height="490" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1611126943239" />
-    <state x="1953" y="253" width="894" height="816" key="search.everywhere.popup" timestamp="1618666650862">
+    <state x="1989" y="256" width="1058" height="591" key="find.popup/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619745764455" />
+    <state x="1953" y="253" width="894" height="816" key="search.everywhere.popup" timestamp="1619756093011">
       <screen x="1440" y="25" width="1920" height="1055" />
     </state>
-    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875/1440.25.1920.1055@0.25.1440.875" timestamp="1613753548848" />
-    <state x="1953" y="253" width="894" height="816" key="search.everywhere.popup/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618666650862" />
-    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1611649394537" />
+    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875/1440.25.1920.1055@0.25.1440.875" timestamp="1619570084312" />
+    <state x="1953" y="253" width="894" height="816" key="search.everywhere.popup/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619756093011" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

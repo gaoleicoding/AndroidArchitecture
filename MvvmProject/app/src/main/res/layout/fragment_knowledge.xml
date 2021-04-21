@@ -48,19 +48,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:drawableStart="@drawable/icon_praise"
                 android:onClick="@{(view)->eventlistener.clickPraise(view)}"
                 android:text='@{item.praiseCount+""}'
                 android:textSize="18sp"
-                tools:text="1" />
-
+                tools:text="1"
+                app:drawableStartCompat="@drawable/icon_praise" />
 
         </LinearLayout>
 
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:hint="@string/hint_change_content"
             android:text="@={item.knowledgeContent}" />
