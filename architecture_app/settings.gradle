@@ -1,0 +1,2 @@
+include ':databinding'
+include ':app'
