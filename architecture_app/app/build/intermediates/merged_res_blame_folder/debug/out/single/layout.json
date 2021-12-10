@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_error_page.xml",
+        "source": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/src/main/res/layout/layout_error_page.xml"
+    },
+    {
+        "merged": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_article_detail.xml",
+        "source": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/src/main/res/layout/activity_article_detail.xml"
+    },
+    {
+        "merged": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_knowledge.xml",
+        "source": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/src/main/res/layout/fragment_knowledge.xml"
+    },
+    {
+        "merged": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_base.xml",
+        "source": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/src/main/res/layout/fragment_base.xml"
+    },
+    {
+        "merged": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_project_list.xml",
+        "source": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/src/main/res/layout/item_project_list.xml"
+    },
+    {
+        "merged": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
+        "source": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/src/main/res/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_project.xml",
+        "source": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/src/main/res/layout/fragment_project.xml"
+    },
+    {
+        "merged": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_header.xml",
+        "source": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/src/main/res/layout/layout_header.xml"
+    },
+    {
+        "merged": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_navigation.xml",
+        "source": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/src/main/res/layout/fragment_navigation.xml"
+    }
+]

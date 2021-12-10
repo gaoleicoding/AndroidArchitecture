@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/architecture_app.iml" filepath="$PROJECT_DIR$/.idea/modules/architecture_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/architecture_app.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/architecture_app.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/databinding/architecture_app.databinding.iml" filepath="$PROJECT_DIR$/.idea/modules/databinding/architecture_app.databinding.iml" />
+    </modules>
+  </component>
+</project>

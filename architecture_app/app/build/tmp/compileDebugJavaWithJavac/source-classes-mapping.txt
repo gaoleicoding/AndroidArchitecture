@@ -1,0 +1,90 @@
+com/gaolei/mvvm/net/RestService.java
+ com.gaolei.mvvm.net.RestService
+com/gaolei/mvvm/BuildConfig.java
+ com.gaolei.mvvm.BuildConfig
+com/gaolei/mvvm/adapter/ProjectAdapter.java
+ com.gaolei.mvvm.adapter.ProjectAdapter
+ com.gaolei.mvvm.adapter.ProjectAdapter$MyViewHolder
+ com.gaolei.mvvm.adapter.ProjectAdapter$OnItemClickListener
+com/gaolei/mvvm/databinding/FragmentKnowledgeBinding.java
+ com.gaolei.mvvm.databinding.FragmentKnowledgeBinding
+com/gaolei/mvvm/activity/BaseActivity.java
+ com.gaolei.mvvm.activity.BaseActivity
+com/gaolei/mvvm/databinding/LayoutHeaderBinding.java
+ com.gaolei.mvvm.databinding.LayoutHeaderBinding
+com/gaolei/mvvm/databinding/FragmentHomeBinding.java
+ com.gaolei.mvvm.databinding.FragmentHomeBinding
+com/gaolei/mvvm/DataBindingTriggerClass.java
+ com.gaolei.mvvm.DataBindingTriggerClass
+com/gaolei/mvvm/model/BannerListData.java
+ com.gaolei.mvvm.model.BannerListData
+ com.gaolei.mvvm.model.BannerListData$BannerData
+com/gaolei/mvvm/databinding/LayoutErrorPageBinding.java
+ com.gaolei.mvvm.databinding.LayoutErrorPageBinding
+com/gaolei/mvvm/utils/NetworkUtil.java
+ com.gaolei.mvvm.utils.NetworkUtil
+com/gaolei/mvvm/fragment/KnowledgeFragment.java
+ com.gaolei.mvvm.fragment.KnowledgeFragment
+ com.gaolei.mvvm.fragment.KnowledgeFragment$EventListener
+com/gaolei/mvvm/databinding/FragmentBaseBinding.java
+ com.gaolei.mvvm.databinding.FragmentBaseBinding
+com/gaolei/mvvm/model/ProjectListData.java
+ com.gaolei.mvvm.model.ProjectListData
+ com.gaolei.mvvm.model.ProjectListData$FeedArticleData
+ com.gaolei.mvvm.model.ProjectListData$ListData
+com/gaolei/mvvm/model/KnowledgeItem.java
+ com.gaolei.mvvm.model.KnowledgeItem
+com/gaolei/mvvm/fragment/NavigationFragment.java
+ com.gaolei.mvvm.fragment.NavigationFragment
+com/gaolei/mvvm/viewmodel/ProjectViewModel.java
+ com.gaolei.mvvm.viewmodel.ProjectViewModel
+ com.gaolei.mvvm.viewmodel.ProjectViewModel$1
+com/gaolei/mvvm/fragment/ProjectFragment.java
+ com.gaolei.mvvm.fragment.ProjectFragment
+com/gaolei/mvvm/viewmodel/BannerViewModel.java
+ com.gaolei.mvvm.viewmodel.BannerViewModel
+ com.gaolei.mvvm.viewmodel.BannerViewModel$1
+com/gaolei/mvvm/view/Html5Webview.java
+ com.gaolei.mvvm.view.Html5Webview
+ com.gaolei.mvvm.view.Html5Webview$1
+ com.gaolei.mvvm.view.Html5Webview$MyWebCromeClient
+ com.gaolei.mvvm.view.Html5Webview$MyWebviewClient
+com/gaolei/mvvm/model/PageTitle.java
+ com.gaolei.mvvm.model.PageTitle
+com/gaolei/mvvm/databinding/FragmentProjectBinding.java
+ com.gaolei.mvvm.databinding.FragmentProjectBinding
+com/gaolei/mvvm/databinding/ActivityMainBinding.java
+ com.gaolei.mvvm.databinding.ActivityMainBinding
+com/gaolei/mvvm/net/HttpLoggingInterceptor.java
+ com.gaolei.mvvm.net.HttpLoggingInterceptor
+com/gaolei/mvvm/net/RestApiProvider.java
+ com.gaolei.mvvm.net.RestApiProvider
+com/gaolei/mvvm/view/ProgressView.java
+ com.gaolei.mvvm.view.ProgressView
+com/gaolei/mvvm/MainActivity.java
+ com.gaolei.mvvm.MainActivity
+com/gaolei/mvvm/fragment/BaseFragment.java
+ com.gaolei.mvvm.fragment.BaseFragment
+com/gaolei/mvvm/databinding/FragmentNavigationBinding.java
+ com.gaolei.mvvm.databinding.FragmentNavigationBinding
+com/gaolei/mvvm/databinding/ActivityArticleDetailBinding.java
+ com.gaolei.mvvm.databinding.ActivityArticleDetailBinding
+com/gaolei/mvvm/fragment/HomeFragment.java
+ com.gaolei.mvvm.fragment.HomeFragment
+ com.gaolei.mvvm.fragment.HomeFragment$1
+ com.gaolei.mvvm.fragment.HomeFragment$2
+ com.gaolei.mvvm.fragment.HomeFragment$3
+com/gaolei/mvvm/utils/StatusBarUtil.java
+ com.gaolei.mvvm.utils.StatusBarUtil
+com/gaolei/mvvm/binding/ImageViewAttrAdapter.java
+ com.gaolei.mvvm.binding.ImageViewAttrAdapter
+com/gaolei/mvvm/activity/ArticleDetailActivity.java
+ com.gaolei.mvvm.activity.ArticleDetailActivity
+com/gaolei/mvvm/utils/StatusBarView.java
+ com.gaolei.mvvm.utils.StatusBarView
+com/gaolei/mvvm/adapter/DividerItemDecoration.java
+ com.gaolei.mvvm.adapter.DividerItemDecoration
+com/gaolei/mvvm/application/CustomApplication.java
+ com.gaolei.mvvm.application.CustomApplication
+com/gaolei/mvvm/databinding/ItemProjectListBinding.java
+ com.gaolei.mvvm.databinding.ItemProjectListBinding

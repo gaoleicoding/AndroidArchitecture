@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Volumes/GaoLei/Android/GIthub/AndroidArchitecture/architecture_app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml",
+            "map": [
+                {
+                    "source": "/Users/gaolei/.gradle/caches/transforms-2/files-2.1/9b1339fc8024f2eaa2108b14712aba6d/jetified-SmartRefreshLayout-1.0.5.1/res/values-zh/values-zh.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,163",
+                        "endColumns": "107,91",
+                        "endOffsets": "158,250"
+                    }
+                }
+            ]
+        }
+    ]
+}
